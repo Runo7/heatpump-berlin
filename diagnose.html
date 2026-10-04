@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><title>Browser-Diagnose</title></head>
+<body style="font-family:Arial;background:#fff8f0;color:#222;padding:30px">
+<h1 style="color:#e8590c">✅ Wenn du diesen Text LIEST, rendert dein Browser HTML + CSS korrekt!</h1>
+<p>Dann liegt das Problem an einem dieser Punkte:</p>
+<ul style="font-size:18px;line-height:2">
+<li>Die <b>index.html in deinem Ordner ist nicht aktuell</b> (ältere/defekte Kopie) – bitte neu aus diesem Projekt kopieren.</li>
+<li>Eine <b>Browser-Erweiterung</b> (Adblocker/NoScript/Privacy) blockiert die Seite bei file:// – Test: Privates Fenster ohne Erweiterungen.</li>
+<li>Der Browser cached eine alte Version – Test: <b>Strg+F5</b> bzw. Strg+Umschalt+R.</li>
+</ul>
+<div id="test" style="background:#e8590c;color:#fff;padding:16px;border-radius:12px;font-size:20px">CSS-Test: Box orange? → CSS ok</div>
+<img src="AC.png" width="300" alt="Falls dieses Bild NICHT erscheint: Bilder im selben Ordner fehlen!">
+<script>document.getElementById('test').insertAdjacentHTML('beforeend',' | JS-Test: OK (Script läuft)');</script>
+</body></html>
