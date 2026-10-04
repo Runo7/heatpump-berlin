@@ -1,29 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <noscript>
-    <div style="background:#e8590c;color:#fff;text-align:center;padding:14px;font-family:Arial,sans-serif;font-weight:bold;">
-      ⚠️ Bitte aktivieren Sie JavaScript bzw. deaktivieren Sie Werbeblocker/Erweiterungen, falls Inhalte nicht erscheinen.
-    </div>
-  </noscript>
-  <script>
-    // Anti-Blank-Screen-Fallback: Falls CSS/JS durch Blocker verhindert wird,
-    // sorgt dieses Inline-Script dafuer, dass die Seite spaetestens nach 2s sichtbar ist.
-    (function(){
-      try {
-        window.addEventListener('DOMContentLoaded', function(){
-          setTimeout(function(){
-            var b = document.body;
-            if (!b) return;
-            var st = window.getComputedStyle(b);
-            if (st.display === 'none') b.style.display = 'block';
-            if (parseFloat(st.opacity) === 0) b.style.opacity = '1';
-            if (st.visibility === 'hidden') b.style.visibility = 'visible';
-          }, 1500);
-        });
-      } catch(e){}
-    })();
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wärmepumpen Berlin & Brandenburg – Luft/Wasser & Sole | Midea Direktpartner | Klima & PV</title>
@@ -610,11 +587,7 @@
       </div>
       <div class="hero-visual">
         <div class="hero-card">
-          <img src="AC.png" alt="Klimaanlage mit Heizfunktion – installiert von WärmePuls Berlin" style="width:100%;height:340px;object-fit:cover;display:block;">
-          <video autoplay muted loop playsinline preload="none" id="heroVideo"
-                 style="display:none; position:absolute; inset:0; width:100%; height:100%;">
-            <source src="pv-hero.mp4" type="video/mp4">
-          </video>
+          <img src="AC.png" alt="Klimaanlage mit Heizfunktion – installiert von WärmePuls Berlin" onerror="this.style.background='#ffe8cc'" style="width:100%;height:340px;object-fit:cover;display:block;">
         </div>
         <div class="float-chip chip-1">🔥 Wärmepumpe bis −25 °C</div>
         <div class="float-chip chip-2">❄️ Klima mit Heizfunktion</div>
@@ -1043,19 +1016,6 @@
           });
         }
       } catch (e) { /* bewusst ignorieren – Design muss ohne JS vollständig sichtbar sein */ }
-      try {
-        // Optional: Das PV-Video wird erst geladen, wenn es spielbereit ist.
-        // Schlägt das fehl (z. B. Datei nicht vorhanden), bleibt einfach das Bild stehen.
-        const vid = document.getElementById('heroVideo');
-        if (vid) {
-          vid.addEventListener('canplay', function () {
-            const img = vid.previousElementSibling;
-            if (img) img.style.display = 'none';
-            vid.style.display = 'block';
-          });
-          vid.load();
-        }
-      } catch (e) { /* ignorieren */ }
     })();
   </script>
 </body>
