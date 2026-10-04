@@ -299,244 +299,39 @@
       .footer-grid { grid-template-columns: 1fr; }
       .midea-inner { padding: 24px; }
     }
-  </style>
+  
+    /* ---- Structured-Data-Sektion (HTML/Microdata statt JSON-LD) ---- */
+    .org-data { background: linear-gradient(180deg,#fff7ec,#ffffff); padding: 64px 0; }
+    .mini-card { padding: 22px; }
+    .mini-card h3 { margin-bottom: 10px; color: var(--warm-dark); font-size: 1.15rem; }
+    .mini-card h4 { margin: 16px 0 6px; font-size: .98rem; color: var(--ink-soft); }
+    .mini-card address { font-style: normal; margin-bottom: 8px; }
+    .mini-card p a { color: var(--cool-dark); text-decoration: none; font-weight: 600; }
+    .clean-list { list-style: none; }
+    .clean-list li { padding: 3px 0; }
+    .chip-row { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip-row li { background: #fef3e2; border: 1px solid #ffd9a8; border-radius: 999px; padding: 4px 12px; font-size: .85rem; }
+    .chip-row li a { color: var(--warm-dark); text-decoration: none; font-weight: 700; }
+    .offer-catalog { margin-top: 34px; }
+    .offer-catalog h3 { color: var(--cool-dark); margin-bottom: 14px; }
+    .catalog-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 16px; }
+    .catalog-list > li { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; border-left: 6px solid var(--warm); }
+    .catalog-list h4 { margin-bottom: 6px; }
+    .catalog-list p { font-size: .92rem; color: var(--ink-soft); }
+    .catalog-list .provider, .catalog-list .area { margin-top: 6px; font-size: .82rem; color: var(--cool-dark); }
+    .catalog-list .provline { margin-top: 6px; font-size: .8rem; color: var(--green-dark); font-weight: 700; }
+    .site-meta { padding: 18px 20px; margin: 26px auto; background: #f2f7fb; border-radius: var(--radius); }
+    .breadcrumbs { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+    .breadcrumbs .sep { color: var(--ink-soft); }
+    .breadcrumbs a { color: var(--cool-dark); text-decoration: none; font-weight: 600; }
+    .faq-section { padding: 64px 0; }
+    .faq-dl { max-width: 860px; margin: 0 auto; }
+    .faq-item { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 24px; margin-bottom: 16px; }
+    .faq-item dt { font-weight: 800; color: var(--warm-dark); margin-bottom: 8px; }
+    .faq-item dd { color: var(--ink-soft); margin: 0; }
+</style>
 
   <!-- ================= JSON-LD Structured Data ================= -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness", "HVACBusiness"],
-        "@id": "https://www.example-heizungsbauer-berlin.de/#organization",
-        "name": "WärmePuls Berlin – Heizungsbau & Wärmepumpen",
-        "legalName": "WärmePuls Berlin GmbH",
-        "description": "Fachbetrieb für Wärmepumpen (Luft/Wasser und Sole/Wasser), Klimaanlagen mit Heizfunktion und Photovoltaik in Berlin und Brandenburg. Midea-Direktpartner, Ingenieur-Planung (Heizlast-, Rohrnetz-, Heizflächenberechnung), externe Gutachter-Abnahme und herstellerkonforme Wartung.",
-        "url": "https://www.example-heizungsbauer-berlin.de/",
-        "telephone": "+49-30-1234567",
-        "email": "kontakt@example-heizungsbauer-berlin.de",
-        "priceRange": "€€",
-        "image": "https://www.example-heizungsbauer-berlin.de/Wärmepumpe Notdienst Bild.jpeg",
-        "logo": "https://www.example-heizungsbauer-berlin.de/mmLogoY.png",
-        "foundingDate": "2015",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Musterstraße 12",
-          "addressLocality": "Berlin",
-          "postalCode": "10115",
-          "addressRegion": "Berlin",
-          "addressCountry": "DE"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 52.5200,
-          "longitude": 13.4050
-        },
-        "hasMap": "https://www.google.com/maps/search/?api=1&query=52.5200,13.4050",
-        "areaServed": [
-          { "@type": "City", "name": "Berlin" },
-          { "@type": "State", "name": "Brandenburg" },
-          { "@type": "AdministrativeArea", "name": "Potsdam" },
-          { "@type": "AdministrativeArea", "name": "Bernau bei Berlin" },
-          { "@type": "AdministrativeArea", "name": "Oranienburg" },
-          { "@type": "AdministrativeArea", "name": "Königs Wusterhausen" },
-          { "@type": "AdministrativeArea", "name": "Strausberg" }
-        ],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "07:00",
-            "closes": "18:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "09:00",
-            "closes": "13:00"
-          }
-        ],
-        "sameAs": [
-          "https://www.facebook.com/examplewaermepuls",
-          "https://www.instagram.com/examplewaermepuls"
-        ],
-        "brand": {
-          "@type": "Brand",
-          "name": "Midea",
-          "logo": "https://www.example-heizungsbauer-berlin.de/Midea Logo.png"
-        },
-        "partner": [
-          { "@type": "Organization", "name": "Midea – Direktpartner" },
-          { "@type": "Organization", "name": "Vaillant" },
-          { "@type": "Organization", "name": "Viessmann" },
-          { "@type": "Organization", "name": "Buderus" },
-          { "@type": "Organization", "name": "Samsung" }
-        ],
-        "knowsAbout": [
-          "Wärmepumpe", "Luft-Wasser-Wärmepumpe", "Sole-Wasser-Wärmepumpe",
-          "Klimaanlage mit Heizfunktion", "Photovoltaik", "Heizlastberechnung",
-          "Rohrnetzberechnung", "Heizflächenauslegung", "Wärmepumpen-Wartung"
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Leistungen WärmePuls Berlin",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.example-heizungsbauer-berlin.de/#waermepumpe-luft-wasser",
-                "name": "Installation von Luft/Wasser-Wärmepumpen",
-                "serviceType": "Heizungsbau",
-                "provider": { "@id": "https://www.example-heizungsbauer-berlin.de/#organization" },
-                "areaServed": "Berlin und Brandenburg",
-                "description": "Beratung, Ingenieur-Planung und Installation von Luft/Wasser-Wärmepumpen namhafter Hersteller als Midea-Direktpartner zum günstigen Festpreis."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.example-heizungsbauer-berlin.de/#waermepumpe-sole",
-                "name": "Installation von Sole/Wasser-Wärmepumpen (Erdwärmesonde)",
-                "serviceType": "Heizungsbau",
-                "provider": { "@id": "https://www.example-heizungsbauer-berlin.de/#organization" },
-                "areaServed": "Berlin und Brandenburg",
-                "description": "Erdwärmeerschließung, Tiefenbohrung-Koordination und Installation hocheffizienter Sole/Wasser-Wärmepumpenanlagen inkl. Rohrnetzberechnung."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.example-heizungsbauer-berlin.de/#klima-heizung",
-                "name": "Klimaanlagen mit Heizfunktion (Split & Multi-Split)",
-                "serviceType": "Klimatechnik",
-                "provider": { "@id": "https://www.example-heizungsbauer-berlin.de/#organization" },
-                "areaServed": "Berlin und Brandenburg",
-                "description": "Kühlen im Sommer, heizen im Winter: Professionelle Montage von Klimageräten als Midea-Direktpartner – deutlich günstiger als im klassischen Fachhandel."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.example-heizungsbauer-berlin.de/#photovoltaik",
-                "name": "Photovoltaik-Anlagen inkl. Speicher",
-                "serviceType": "Elektrotechnik / Solartechnik",
-                "provider": { "@id": "https://www.example-heizungsbauer-berlin.de/#organization" },
-                "areaServed": "Berlin und Brandenburg",
-                "description": "Planung, Installation und Inbetriebnahme von PV-Anlagen – ideal kombiniert mit Wärmepumpe oder Wallbox, inkl. Anmeldung beim Marktstammdatenregister."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.example-heizungsbauer-berlin.de/#planung-ingenieure",
-                "name": "Ingenieur-Planung: Heizlast-, Rohrnetz- und Heizflächenberechnung",
-                "serviceType": "TGA-Planung",
-                "provider": { "@id": "https://www.example-heizungsbauer-berlin.de/#organization" },
-                "description": "Verbindliche Fachplanung nach DIN EN 12831 / GEG durch echte Ingenieure – Grundlage für Förderanträge und ein optimales Anlagen-Ergebnis."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.example-heizungsbauer-berlin.de/#wartung",
-                "name": "Professionelle Wartung von Wärmepumpen (herstellerkonform)",
-                "serviceType": "Wartung & Service",
-                "provider": { "@id": "https://www.example-heizungsbauer-berlin.de/#organization" },
-                "description": "Individuelle Wartung je nach Hersteller exakt nach Herstellervorgaben – erhält die Herstellergarantie vollumfänglich."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://www.example-heizungsbauer-berlin.de/#abnahme-gutachter",
-                "name": "Anlagenabnahme durch externe Gutachter",
-                "serviceType": "Prüfung & Abnahme",
-                "provider": { "@id": "https://www.example-heizungsbauer-berlin.de/#organization" },
-                "description": "Unabhängige Abnahme und Dokumentation Ihrer Anlage durch externe Sachverständige – für Sicherheit, Förderung und Werterhalt."
-              }
-            }
-          ]
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.example-heizungsbauer-berlin.de/#website",
-        "url": "https://www.example-heizungsbauer-berlin.de/",
-        "name": "WärmePuls Berlin – Wärmepumpen, Klima & PV",
-        "inLanguage": "de-DE",
-        "publisher": { "@id": "https://www.example-heizungsbauer-berlin.de/#organization" }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.example-heizungsbauer-berlin.de/" },
-          { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://www.example-heizungsbauer-berlin.de/#leistungen" },
-          { "@type": "ListItem", "position": 3, "name": "Kontakt", "item": "https://www.example-heizungsbauer-berlin.de/#kontakt" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Warum sind Ihre Anlagen über den Midea-Direktpartner günstiger?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Als direkter Partner von Midea beziehen wir die Geräte ohne Zwischenhändler und Großhandelsstufen. Zusätzlich arbeiten wir komplett ohne Außendienstler und Vertriebler – die eingesparten Vertriebskosten von rund 6–7 % geben wir unmittelbar an unsere Kunden weiter. So erhalten Sie eine hochwertige Anlage zu einem deutlich besseren Preis."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Welche Wärmepumpen installieren Sie in Berlin und Brandenburg?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Wir installieren primär Luft/Wasser- und Sole/Wasser-Wärmepumpen. Dank der Zusammenarbeit mit vielen Herstellern – u. a. Midea, Vaillant, Viessmann, Buderus und Samsung – finden wir stets das passende System für Ihr Gebäude, Ihren Wärmebedarf und Ihr Budget."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Wer führt die Heizlastberechnung und Planung durch?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Die Planung erfolgt durch echte Ingenieure: Heizlastberechnung nach DIN EN 12831, Rohrnetzberechnung und Heizflächenauslegung. Diese fachliche Planung ist zugleich die Grundlage für Förderanträge (BEG/KFW) und garantiert, dass die Anlage später effizient und mit niedrigen Betriebskosten läuft."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Nimmt jemand die Anlage unabhängig ab?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja. Wir arbeiten eng mit externen Gutachtern zusammen, die Ihre fertige Anlage unabhängig prüfen und abnehmen. Sie erhalten ein unabhängiges Dokumentationsprotokoll – wichtig für Förderung, Garantie und den Werterhalt Ihrer Immobilie."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Bleibt bei einer Wartung durch euch meine Herstellergarantie erhalten?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja, vollumfänglich. Wir warten Wärmepumpen individuell je nach Hersteller und exakt nach dessen Vorgaben und Wartungsplänen. Die dokumentierte, herstellerkonforme Wartung ist Voraussetzung dafür, dass Ihre Herstellergarantie bestehen bleibt."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Kann eine Klimaanlage auch heizen?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja. Moderne Inverter-Klimaanlagen arbeiten als Luft/Luft-Wärmepumpe und können im Winter kostengünstig heizen – ideal als Ergänzung zur Wärmepumpe, für einzelne Räume, Zuhause-Büros oder als Schnellheizung in Übergangszeiten. Als Midea-Direktpartner montieren wir diese Systeme besonders preiswert."
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
 
@@ -1015,5 +810,160 @@
       } catch (e) { /* bewusst ignorieren – Design muss ohne JS vollständig sichtbar sein */ }
     })();
   </script>
+<!-- ================= UNTERNEHMENSDATEN (Structured Data als reines HTML/Microdata, kein JSON-LD) ================= -->
+<section class="org-data" id="unternehmensdaten" itemscope itemtype="https://schema.org/HVACBusiness">
+  <div class="container">
+    <header class="section-head">
+      <span class="badge badge-warm">Unternehmensdaten &middot; Structured Data in reinem HTML</span>
+      <h2 itemprop="name">WärmePuls Berlin – Heizungsbau &amp; Wärmepumpen</h2>
+      <link itemprop="url" href="https://www.example-heizungsbauer-berlin.de/">
+      <meta itemprop="legalName" content="WärmePuls Berlin GmbH">
+      <p class="lead" itemprop="description">Fachbetrieb für Wärmepumpen (Luft/Wasser und Sole/Wasser), Klimaanlagen mit Heizfunktion und Photovoltaik in Berlin und Brandenburg. Midea-Direktpartner, Ingenieur-Planung (Heizlast-, Rohrnetz-, Heizflächenberechnung), externe Gutachter-Abnahme und herstellerkonforme Wartung.</p>
+    </header>
+    <div class="grid-3">
+      <article class="card mini-card"><h3>Kontakt &amp; Standort</h3>
+        <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="streetAddress">Musterstraße 12</span><br>
+          <span itemprop="postalCode">10115</span> <span itemprop="addressLocality">Berlin</span><br>
+          <span itemprop="addressRegion">Berlin</span>, <span itemprop="addressCountry">DE</span></address>
+        <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+          <meta itemprop="latitude" content="52.52"><meta itemprop="longitude" content="13.405">
+          <small>Breitengrad 52.52 &middot; L&auml;ngengrad 13.405</small></div>
+        <p>
+          <a href="tel:+49-30-1234567" itemprop="telephone">&#9742; +49-30-1234567</a><br>
+          <a href="mailto:kontakt@example-heizungsbauer-berlin.de" itemprop="email">&#9993; kontakt@example-heizungsbauer-berlin.de</a><br>
+          <span itemprop="priceRange">€€</span> &middot; gegr&uuml;ndet 2015</p>
+        <link itemprop="image" href="https://www.example-heizungsbauer-berlin.de/Wärmepumpe Notdienst Bild.jpeg"><link itemprop="logo" href="https://www.example-heizungsbauer-berlin.de/mmLogoY.png"><link itemprop="hasMap" href="https://www.google.com/maps/search/?api=1&amp;query=52.5200,13.4050">
+      </article>
+      <article class="card mini-card"><h3>Einsatzgebiet (areaServed)</h3><ul class="clean-list">
+          <li itemprop="areaServed" itemscope itemtype="https://schema.org/City"><span itemprop="name">Berlin</span></li>
+          <li itemprop="areaServed" itemscope itemtype="https://schema.org/State"><span itemprop="name">Brandenburg</span></li>
+          <li itemprop="areaServed" itemscope itemtype="https://schema.org/AdministrativeArea"><span itemprop="name">Potsdam</span></li>
+          <li itemprop="areaServed" itemscope itemtype="https://schema.org/AdministrativeArea"><span itemprop="name">Bernau bei Berlin</span></li>
+          <li itemprop="areaServed" itemscope itemtype="https://schema.org/AdministrativeArea"><span itemprop="name">Oranienburg</span></li>
+          <li itemprop="areaServed" itemscope itemtype="https://schema.org/AdministrativeArea"><span itemprop="name">Königs Wusterhausen</span></li>
+          <li itemprop="areaServed" itemscope itemtype="https://schema.org/AdministrativeArea"><span itemprop="name">Strausberg</span></li>
+        </ul><h4>Was bedeutet das?</h4><p>Diese Sektion ist zugleich sichtbarer Text f&uuml;r Besucher und maschinenlesbare Daten f&uuml;r Suchmaschinen &ndash; ohne JavaScript oder JSON.</p></article>
+      <article class="card mini-card"><h3>&Ouml;ffnungszeiten</h3><ul class="clean-list">
+          <li itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification">
+            <meta itemprop="dayOfWeek" content="https://schema.org/Monday">
+            <meta itemprop="dayOfWeek" content="https://schema.org/Tuesday">
+            <meta itemprop="dayOfWeek" content="https://schema.org/Wednesday">
+            <meta itemprop="dayOfWeek" content="https://schema.org/Thursday">
+            <meta itemprop="dayOfWeek" content="https://schema.org/Friday">
+            <span>Montag, Dienstag, Mittwoch, Donnerstag, Freitag</span>: <time itemprop="opens">07:00</time>&ndash;<time itemprop="closes">18:00</time> Uhr</li>
+          <li itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification">
+            <meta itemprop="dayOfWeek" content="https://schema.org/Saturday">
+            <span>Samstag</span>: <time itemprop="opens">09:00</time>&ndash;<time itemprop="closes">13:00</time> Uhr</li>
+        </ul>
+        <h4>Direktpartner-Marke</h4>
+        <p itemprop="brand" itemscope itemtype="https://schema.org/Brand"><strong itemprop="name">Midea</strong> &ndash; Direktbezug ohne Zwischenhandel</p>
+        <link itemprop="logo" href="https://www.example-heizungsbauer-berlin.de/Midea Logo.png">
+        <h4>Hersteller &amp; Partner</h4><ul class="chip-row">
+          <li itemprop="partner" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Midea – Direktpartner</span></li>
+          <li itemprop="partner" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Vaillant</span></li>
+          <li itemprop="partner" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Viessmann</span></li>
+          <li itemprop="partner" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Buderus</span></li>
+          <li itemprop="partner" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Samsung</span></li>
+        </ul><h4>Know-how</h4><ul class="chip-row">
+          <li itemprop="knowsAbout">Wärmepumpe</li>
+          <li itemprop="knowsAbout">Luft-Wasser-Wärmepumpe</li>
+          <li itemprop="knowsAbout">Sole-Wasser-Wärmepumpe</li>
+          <li itemprop="knowsAbout">Klimaanlage mit Heizfunktion</li>
+          <li itemprop="knowsAbout">Photovoltaik</li>
+          <li itemprop="knowsAbout">Heizlastberechnung</li>
+          <li itemprop="knowsAbout">Rohrnetzberechnung</li>
+          <li itemprop="knowsAbout">Heizflächenauslegung</li>
+          <li itemprop="knowsAbout">Wärmepumpen-Wartung</li>
+        </ul><h4>Social Media</h4><ul class="chip-row">
+          <li><a href="https://www.facebook.com/examplewaermepuls" rel="me noopener" target="_blank" itemprop="sameAs">examplewaermepuls</a></li>
+          <li><a href="https://www.instagram.com/examplewaermepuls" rel="me noopener" target="_blank" itemprop="sameAs">examplewaermepuls</a></li>
+        </ul></article></div>
+    <div class="offer-catalog">
+      <h3 itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/OfferCatalog"><span itemprop="name">Leistungen WärmePuls Berlin</span></h3>
+      <ol class="catalog-list">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="https://schema.org/Service"><h4 itemprop="name">Installation von Luft/Wasser-Wärmepumpen</h4>
+            <p itemprop="description">Beratung, Ingenieur-Planung und Installation von Luft/Wasser-Wärmepumpen namhafter Hersteller als Midea-Direktpartner zum günstigen Festpreis.</p>
+            <p class="provider">Fachrichtung: <span itemprop="serviceType">Heizungsbau</span></p>
+            <p class="area">Einsatzgebiet: <span itemprop="areaServed">Berlin und Brandenburg</span></p>
+            <p class="provline">Anbieter: <span itemprop="provider" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">WärmePuls Berlin – Heizungsbau &amp; Wärmepumpen</span></span></p></div></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="https://schema.org/Service"><h4 itemprop="name">Installation von Sole/Wasser-Wärmepumpen (Erdwärmesonde)</h4>
+            <p itemprop="description">Erdwärmeerschließung, Tiefenbohrung-Koordination und Installation hocheffizienter Sole/Wasser-Wärmepumpenanlagen inkl. Rohrnetzberechnung.</p>
+            <p class="provider">Fachrichtung: <span itemprop="serviceType">Heizungsbau</span></p>
+            <p class="area">Einsatzgebiet: <span itemprop="areaServed">Berlin und Brandenburg</span></p>
+            <p class="provline">Anbieter: <span itemprop="provider" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">WärmePuls Berlin – Heizungsbau &amp; Wärmepumpen</span></span></p></div></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="https://schema.org/Service"><h4 itemprop="name">Klimaanlagen mit Heizfunktion (Split &amp; Multi-Split)</h4>
+            <p itemprop="description">Kühlen im Sommer, heizen im Winter: Professionelle Montage von Klimageräten als Midea-Direktpartner – deutlich günstiger als im klassischen Fachhandel.</p>
+            <p class="provider">Fachrichtung: <span itemprop="serviceType">Klimatechnik</span></p>
+            <p class="area">Einsatzgebiet: <span itemprop="areaServed">Berlin und Brandenburg</span></p>
+            <p class="provline">Anbieter: <span itemprop="provider" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">WärmePuls Berlin – Heizungsbau &amp; Wärmepumpen</span></span></p></div></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="https://schema.org/Service"><h4 itemprop="name">Photovoltaik-Anlagen inkl. Speicher</h4>
+            <p itemprop="description">Planung, Installation und Inbetriebnahme von PV-Anlagen – ideal kombiniert mit Wärmepumpe oder Wallbox, inkl. Anmeldung beim Marktstammdatenregister.</p>
+            <p class="provider">Fachrichtung: <span itemprop="serviceType">Elektrotechnik / Solartechnik</span></p>
+            <p class="area">Einsatzgebiet: <span itemprop="areaServed">Berlin und Brandenburg</span></p>
+            <p class="provline">Anbieter: <span itemprop="provider" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">WärmePuls Berlin – Heizungsbau &amp; Wärmepumpen</span></span></p></div></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="https://schema.org/Service"><h4 itemprop="name">Ingenieur-Planung: Heizlast-, Rohrnetz- und Heizflächenberechnung</h4>
+            <p itemprop="description">Verbindliche Fachplanung nach DIN EN 12831 / GEG durch echte Ingenieure – Grundlage für Förderanträge und ein optimales Anlagen-Ergebnis.</p>
+            <p class="provider">Fachrichtung: <span itemprop="serviceType">TGA-Planung</span></p>
+            <p class="provline">Anbieter: <span itemprop="provider" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">WärmePuls Berlin – Heizungsbau &amp; Wärmepumpen</span></span></p></div></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="https://schema.org/Service"><h4 itemprop="name">Professionelle Wartung von Wärmepumpen (herstellerkonform)</h4>
+            <p itemprop="description">Individuelle Wartung je nach Hersteller exakt nach Herstellervorgaben – erhält die Herstellergarantie vollumfänglich.</p>
+            <p class="provider">Fachrichtung: <span itemprop="serviceType">Wartung &amp; Service</span></p>
+            <p class="provline">Anbieter: <span itemprop="provider" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">WärmePuls Berlin – Heizungsbau &amp; Wärmepumpen</span></span></p></div></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+          <div itemprop="itemOffered" itemscope itemtype="https://schema.org/Service"><h4 itemprop="name">Anlagenabnahme durch externe Gutachter</h4>
+            <p itemprop="description">Unabhängige Abnahme und Dokumentation Ihrer Anlage durch externe Sachverständige – für Sicherheit, Förderung und Werterhalt.</p>
+            <p class="provider">Fachrichtung: <span itemprop="serviceType">Prüfung &amp; Abnahme</span></p>
+            <p class="provline">Anbieter: <span itemprop="provider" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">WärmePuls Berlin – Heizungsbau &amp; Wärmepumpen</span></span></p></div></li>
+      </ol></div></div></section>
+
+<!-- ================= WEBSEITE & BROTKRUMEN-PFAD (HTML/Microdata) ================= -->
+<nav class="site-meta container" aria-label="Strukturierte Webseiten-Daten" itemscope itemtype="https://schema.org/WebSite">
+  <meta itemprop="name" content="WärmePuls Berlin – Wärmepumpen, Klima &amp; PV">
+  <meta itemprop="inLanguage" content="de-DE">
+  <link itemprop="url" href="https://www.example-heizungsbauer-berlin.de/">
+  <ol class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><meta itemprop="position" content="1"><a href="https://www.example-heizungsbauer-berlin.de/" itemprop="item"><span itemprop="name">Start</span></a></li>
+ <li class="sep" aria-hidden="true">&rsaquo;</li>  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><meta itemprop="position" content="2"><a href="https://www.example-heizungsbauer-berlin.de/#leistungen" itemprop="item"><span itemprop="name">Leistungen</span></a></li>
+ <li class="sep" aria-hidden="true">&rsaquo;</li>  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><meta itemprop="position" content="3"><a href="https://www.example-heizungsbauer-berlin.de/#kontakt" itemprop="item"><span itemprop="name">Kontakt</span></a></li>
+  </ol></nav>
+
+<!-- ================= HÄUFIGE FRAGEN (FAQPage als HTML/Microdata statt JSON-LD) ================= -->
+<section class="faq-section" id="faq-daten"><div class="container faq-main" itemscope itemtype="https://schema.org/FAQPage">
+  <header class="section-head"><span class="badge badge-cool">H&auml;ufige Fragen &middot; maschinenlesbar als reines HTML</span>
+  <h2>Fragen &amp; Antworten</h2><p class="lead">Alle Antworten sind gleichzeitig sichtbarer Text und strukturierte Daten (Microdata) &ndash; ohne ein einziges JSON-Skript.</p></header>
+  <dl class="faq-dl">
+    <div class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <dt itemprop="name">Warum sind Ihre Anlagen über den Midea-Direktpartner günstiger?</dt>
+      <dd itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <div itemprop="text">Als direkter Partner von Midea beziehen wir die Geräte ohne Zwischenhändler und Großhandelsstufen. Zusätzlich arbeiten wir komplett ohne Außendienstler und Vertriebler – die eingesparten Vertriebskosten von rund 6–7 % geben wir unmittelbar an unsere Kunden weiter. So erhalten Sie eine hochwertige Anlage zu einem deutlich besseren Preis.</div></dd></div>
+    <div class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <dt itemprop="name">Welche Wärmepumpen installieren Sie in Berlin und Brandenburg?</dt>
+      <dd itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <div itemprop="text">Wir installieren primär Luft/Wasser- und Sole/Wasser-Wärmepumpen. Dank der Zusammenarbeit mit vielen Herstellern – u. a. Midea, Vaillant, Viessmann, Buderus und Samsung – finden wir stets das passende System für Ihr Gebäude, Ihren Wärmebedarf und Ihr Budget.</div></dd></div>
+    <div class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <dt itemprop="name">Wer führt die Heizlastberechnung und Planung durch?</dt>
+      <dd itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <div itemprop="text">Die Planung erfolgt durch echte Ingenieure: Heizlastberechnung nach DIN EN 12831, Rohrnetzberechnung und Heizflächenauslegung. Diese fachliche Planung ist zugleich die Grundlage für Förderanträge (BEG/KFW) und garantiert, dass die Anlage später effizient und mit niedrigen Betriebskosten läuft.</div></dd></div>
+    <div class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <dt itemprop="name">Nimmt jemand die Anlage unabhängig ab?</dt>
+      <dd itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <div itemprop="text">Ja. Wir arbeiten eng mit externen Gutachtern zusammen, die Ihre fertige Anlage unabhängig prüfen und abnehmen. Sie erhalten ein unabhängiges Dokumentationsprotokoll – wichtig für Förderung, Garantie und den Werterhalt Ihrer Immobilie.</div></dd></div>
+    <div class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <dt itemprop="name">Bleibt bei einer Wartung durch euch meine Herstellergarantie erhalten?</dt>
+      <dd itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <div itemprop="text">Ja, vollumfänglich. Wir warten Wärmepumpen individuell je nach Hersteller und exakt nach dessen Vorgaben und Wartungsplänen. Die dokumentierte, herstellerkonforme Wartung ist Voraussetzung dafür, dass Ihre Herstellergarantie bestehen bleibt.</div></dd></div>
+    <div class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <dt itemprop="name">Kann eine Klimaanlage auch heizen?</dt>
+      <dd itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <div itemprop="text">Ja. Moderne Inverter-Klimaanlagen arbeiten als Luft/Luft-Wärmepumpe und können im Winter kostengünstig heizen – ideal als Ergänzung zur Wärmepumpe, für einzelne Räume, Zuhause-Büros oder als Schnellheizung in Übergangszeiten. Als Midea-Direktpartner montieren wir diese Systeme besonders preiswert.</div></dd></div>
+  </dl></div></section>
+
 </body>
 </html>
